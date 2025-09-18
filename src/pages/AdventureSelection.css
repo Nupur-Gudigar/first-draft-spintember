@@ -1,0 +1,113 @@
+/* Fullscreen background */
+.adventure-bg {
+  height: 100vh;
+  width: 100vw;
+  background: url("/src/assets/adventure-bg.gif") no-repeat center center fixed;
+  background-size: cover;
+  background-position: 70% center; /* shift right so girl is visible */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;   /* 👈 push content towards top */
+  position: relative;
+  overflow: hidden;
+  padding-top: 60px;         /* 👈 adjust distance from top */
+}
+
+/* Dark overlay */
+.adventure-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/* Content container */
+.adventure-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 60%;                     /* allow wider heading */
+  max-width: 800px;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Title */
+.adventure-title {
+  font-family: 'Jersey 25', sans-serif;
+  font-size: 4rem;                 /* large like Figma */
+  font-weight: bold;
+  margin-bottom: 50px;             /* spacing before buttons */
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  line-height: 1.2;
+  white-space: nowrap;             /* 👈 force single line */
+}
+
+/* Button container */
+.adventure-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Base button style */
+.adventure-btn {
+  width: 320px;
+  padding: 18px 35px;
+  border-radius: 999px;
+  background: rgba(128, 90, 213, 0.9);
+  color: white;
+  font-family: 'Jersey 25', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adventure-btn:hover {
+  transform: scale(1.05);
+  background: rgba(168, 85, 247, 1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Zig-zag stagger */
+.zigzag-left {
+  margin-left: 60px;     /* aligned under heading */
+}
+
+.zigzag-right {
+  margin-left: 300px; /* stagger for visual interest */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { 
+  .adventure-content {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .adventure-title {
+    font-size: 2.5rem;
+    white-space: normal; /* allow wrapping */
+    margin-bottom: 30px;
+  }
+
+  .adventure-btn {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+  }
+
+  .zigzag-left, .zigzag-right {
+    margin-left: 0; /* remove stagger on small screens */
+  }
+}
