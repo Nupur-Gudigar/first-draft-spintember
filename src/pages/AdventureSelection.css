@@ -59,7 +59,7 @@
   width: 320px;
   padding: 18px 35px;
   border-radius: 999px;
-  background: rgba(128, 90, 213, 0.9);
+  background: linear-gradient(135deg, #8e2de2, #4a00e0); 
   color: white;
   font-family: 'Jersey 25', sans-serif;
   font-size: 1.3rem;
@@ -67,7 +67,7 @@
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,17 +75,18 @@
 
 .adventure-btn:hover {
   transform: scale(1.05);
-  background: rgba(168, 85, 247, 1);
+  color: white;
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
 }
 
 /* Zig-zag stagger */
 .zigzag-left {
-  margin-left: 60px;     /* aligned under heading */
+  margin-left: 80px;     /* aligned under heading */
 }
 
 .zigzag-right {
-  margin-left: 300px; /* stagger for visual interest */
+  margin-left: 320px; /* stagger for visual interest */
 }
 
 /* Responsive adjustments */
