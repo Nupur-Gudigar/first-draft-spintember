@@ -84,11 +84,11 @@
 
 /* Zig-zag stagger */
 .zigzag-left {
-  margin-left: 60px;
+  margin-left: 100px;
 }
 
 .zigzag-right {
-  margin-left: 200px;
+  margin-left: 240px;
 }
 
 /* Responsive adjustments */
