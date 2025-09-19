@@ -3,10 +3,10 @@ import "./AdventureSelection.css";
 import { Link } from "react-router-dom";
 
 const adventureTypes = [
-  { label: "CHAOTIC ADVENTURE", path: "/chaotic-wheel" },
-  { label: "COZY ADVENTURE", path: "/cozy-wheel" },
-  { label: "ACADEMIC ADVENTURE", path: "/academic-wheel" },
-  { label: "CREATIVE ADVENTURE", path: "/creative-wheel" },
+  { label: "CHAOTIC ADVENTURE", path: "/ChaoticWheel" },
+  { label: "COZY ADVENTURE", path: "/CozyWheel" },
+  { label: "ACADEMIC ADVENTURE", path: "/AcademicWheel" },
+  { label: "CREATIVE ADVENTURE", path: "/CreativeWheel" },
 ];
 
 const AdventureSelection = () => {

@@ -4,13 +4,13 @@
   width: 100vw;
   background: url("/src/assets/adventure-bg.gif") no-repeat center center fixed;
   background-size: cover;
-  background-position: 70% center; /* shift right so girl is visible */
+  background-position: 70% center; 
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;   /* 👈 push content towards top */
+  align-items: center;   /* center vertically */
   position: relative;
   overflow: hidden;
-  padding-top: 60px;         /* 👈 adjust distance from top */
+  padding: 0;            /* remove top padding */
 }
 
 /* Dark overlay */
@@ -26,43 +26,46 @@
   position: relative;
   z-index: 2;
   color: white;
-  width: 60%;                     /* allow wider heading */
+  width: 60%;
   max-width: 800px;
   margin-left: 5%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;   /* center inside viewport */
+  height: 100%;              /* take full height */
+  box-sizing: border-box;
 }
 
 /* Title */
 .adventure-title {
   font-family: 'Jersey 25', sans-serif;
-  font-size: 4rem;                 /* large like Figma */
+  font-size: 3.5rem;
   font-weight: bold;
-  margin-bottom: 50px;             /* spacing before buttons */
+  margin-bottom: 30px;  /* less spacing */
   text-transform: uppercase;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
   line-height: 1.2;
-  white-space: nowrap;             /* 👈 force single line */
+  white-space: nowrap;
 }
 
 /* Button container */
 .adventure-buttons {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;   /* reduce spacing so all buttons fit */
   width: 100%;
 }
 
 /* Base button style */
 .adventure-btn {
-  width: 320px;
-  padding: 18px 35px;
+  width: 300px;
+  padding: 15px 25px;
   border-radius: 999px;
   background: linear-gradient(135deg, #8e2de2, #4a00e0); 
   color: white;
   font-family: 'Jersey 25', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
@@ -75,18 +78,17 @@
 
 .adventure-btn:hover {
   transform: scale(1.05);
-  color: white;
   background: linear-gradient(135deg, #4a00e0, #8e2de2);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
 /* Zig-zag stagger */
 .zigzag-left {
-  margin-left: 80px;     /* aligned under heading */
+  margin-left: 60px;
 }
 
 .zigzag-right {
-  margin-left: 320px; /* stagger for visual interest */
+  margin-left: 200px;
 }
 
 /* Responsive adjustments */
@@ -94,21 +96,21 @@
   .adventure-content {
     width: 90%;
     margin-left: 5%;
+    align-items: center;
+    text-align: center;
   }
 
   .adventure-title {
     font-size: 2.5rem;
-    white-space: normal; /* allow wrapping */
-    margin-bottom: 30px;
+    white-space: normal;
   }
 
   .adventure-btn {
     width: 100%;
-    padding: 15px 20px;
-    font-size: 1.1rem;
+    margin-left: 0 !important;
   }
 
   .zigzag-left, .zigzag-right {
-    margin-left: 0; /* remove stagger on small screens */
+    margin-left: 0;
   }
 }
